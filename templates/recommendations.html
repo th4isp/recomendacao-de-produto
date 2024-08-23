@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recomendações</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recomendações do ID: {{ user_id }}</h1>
+        <ul>
+            {% if recommendations == "No recommendations available" %}
+                <li>{{ recommendations }}</li>
+            {% else %}
+                {% for movie in recommendations %}
+                    <li>{{ movie }}</li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+        <a href="/">Voltar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recomendações de Filmes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Digite o ID do Usuário</h1>
+        <form action="/recommend" method="post">
+            <label for="user_id">ID do Usuário:</label>
+            <input type="text" id="user_id" name="user_id" required>
+            <input type="submit" value="Obter Recomendações">
+        </form>
+    </div>
+</body>
+</html>
